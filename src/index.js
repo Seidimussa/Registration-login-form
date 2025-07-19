@@ -9,7 +9,7 @@ app.use(express.json());
 // Static file
 app.use(express.static("public"));
 // Serve files from the "interface" directory
-app.use("/interface", express.static(path.resolve(__dirname, '..', '..', 'interface')));
+app.use("/interface", express.static(path.join(__dirname, '..', 'interface')));
 
 app.use(express.urlencoded({ extended: false }));
 //use EJS as the view engine
